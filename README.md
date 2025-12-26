@@ -80,7 +80,7 @@ This project explores approaches to parking ticket prediction, considering:
 ## Future Work
 
 ### Planned Analyses
-- **Time Series Modeling**: Predict ticket likelihood given location and time
+- **Time Series Modeling**: forecasting tickets; compare models like ARIMA or Prophet to time series foundation models
 - **Feature Engineering**: Extract temporal features (day of week, month, holiday status)
 - **Equity Analysis**
 - **Advanced Models for Spatio-Temporal ticket prediction**: 
