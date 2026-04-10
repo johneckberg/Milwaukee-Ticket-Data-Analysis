@@ -34,6 +34,15 @@
 * how does count change for different days of the week?
 * how does count change for different months?
 
+### Features
+
+* is holiday or not
+* is snow emergency
+* is weekend
+* Heavy Rain or not
+* precipitation amount
+* Lagged ticket count from previous day
+* Month/season
 
 ### Data modeling and prediction
 
