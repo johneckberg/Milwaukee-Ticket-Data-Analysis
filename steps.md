@@ -49,7 +49,7 @@
 * Poisson regression:
     * Poisson regression is a type of Generalized Linear Model (GLM) used to model count data (non-negative integers) or rates. We can find the parameters via MLE
     * Poisson regression assumes the response variable Y has a Poisson distribution, and like other GLMS, assumes that the log of the expected value of this distribution can be modeled by a linear combination of unknown parameters
-    * It carries with it the standard Poisson assumption that events must be independent in the sense that the arrival of one call will not make another more or less likely
+    * It carries with it the standard Poisson assumption that events must be independent in the sense that the arrival of one event will not make another more or less likely
     * [When to use negative binomial and Poisson regression](https://stats.stackexchange.com/questions/653727/when-to-use-negative-binomial-and-poisson-regression)
         * this recommends bootstrapping standard error
     * Notes on [Poisson Regression](https://online.stat.psu.edu/stat462/node/209/)
