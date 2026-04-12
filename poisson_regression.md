@@ -50,11 +50,33 @@ This fundamentally changes how we interpret the coefficients:
 
 ## Performance/Goodness of fit Measures
 
-* Two different chi-square tests
+* Two different
     * **Pearson statistic**: $$ X^2 = \sum_{i=1}^n \frac{(y_i - \hat{\mu}_i)^2}{\text{Var}(\hat{\mu}_i)} $$
         * *Notes*: Compares the observed counts ($y_i$) to the expected counts ($\hat{\mu}_i$) scaled by the variance. For a Poisson model, $\text{Var}(\hat{\mu}_i) = \hat{\mu}_i$. If the ratio of the Pearson statistic to the model's degrees of freedom ($X^2 / df$) is significantly greater than 1, it indicates overdispersion or a poor model fit.
     * **Deviance statistic**: $$ D = 2 \sum_{i=1}^n \left[ y_i \ln\left(\frac{y_i}{\hat{\mu}_i}\right) - (y_i - \hat{\mu}_i) \right] $$
         * *Notes*: Based on the likelihood ratio test, it compares the log-likelihood of your fitted model to a "saturated" model (a hypothetical model with a parameter for every observation that perfectly fits the data). As with the Pearson statistic, a residual deviance significantly larger than the residual degrees of freedom ($D / df > 1$) often indicates overdispersion or missing predictors.
+
+## Measuring co-linearity in both our categorical and ratio features
+
+* **Chi-Square Test (and its false alarms)**: Chi-square will capture any relationship between categorical features (both linear and non-linear). Since our GLMs mostly care about additive/linear overlap, Chi-square might trigger false alarms. Plus, with a large dataset, almost everything will flag as statistically significant anyway?
+* **Cramer's V**: Cramer's V from my understanding is Pearson's R for categorical data. Because Chi-square values blow up as your sample size grows, they are hard to interpret as a metric of "how bad is the overlap." Cramer's V takes that Chi-square value and scales it nicely between `0` (no association) and `1` (perfect association). If two categorical features have a super high Cramer's V, they are effectively feeding the model the exact same information, and we might want to drop one.
+* **Pearson's R**: For our standard continuous/ratio features, we'll just check the classic Pearson correlation matrix. If two continuous features have an R value close to 1 or -1, that's heavy collinearity.
+* **The Ridge Regression Fallback**: What if our features are highly correlated (Cramer's V or Pearson's R is really high)? Extreme collinearity makes our model's coefficients unstable. If this happens, we can apply an L2 penalty (Ridge Regression) to our Poisson or Negative Binomial model. Ridge mathematically forces the model to shrink the coefficients, reducing variance.
+
+## Testing
+
+* we need to measure the significance of our predictors relationship with both ticket count and with eachother
+* Types of visual analysis to build:
+    * **Target Variable Distribution (Histogram)**: Plot a histogram of daily ticket counts (`total_tickets`). This helps us actually see the right-skewed tail and visually confirm the overdispersion (i.e., checking if the variance looks huge compared to the mean).
+    * **Categorical Features vs. Tickets (Box/Violin Plots)**: Plot `total_tickets` on the Y-axis and group by features like `WeekDay`, `Month`, or `is_holiday` on the X-axis.
+    * **Continuous Features vs. Tickets (Scatter + KDE Smoothing)**: For weather data (`max_temp`, `precipitation`)
+    * **Over-Time Trends (Line Chart with Rolling Averages)**: A 7-day or 30-day moving average of ticket counts plotted over time will smooth out the weekend dips and let us see the larger seasonality trends (e.g., summer peaks or pandemic-related drops?).
+
+## models to train
+
+* poisson regression
+* Negative binomial
+* potentially both of those with ridge regression if needed
 
 
 Week 12: visualization and statistical testing
