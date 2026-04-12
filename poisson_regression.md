@@ -50,7 +50,7 @@ This fundamentally changes how we interpret the coefficients:
 
 ## Performance/Goodness of fit Measures
 
-* Two different
+* Two different methods for Poisson, not sure if they generalize to Negative binomial?
     * **Pearson statistic**: $$ X^2 = \sum_{i=1}^n \frac{(y_i - \hat{\mu}_i)^2}{\text{Var}(\hat{\mu}_i)} $$
         * *Notes*: Compares the observed counts ($y_i$) to the expected counts ($\hat{\mu}_i$) scaled by the variance. For a Poisson model, $\text{Var}(\hat{\mu}_i) = \hat{\mu}_i$. If the ratio of the Pearson statistic to the model's degrees of freedom ($X^2 / df$) is significantly greater than 1, it indicates overdispersion or a poor model fit.
     * **Deviance statistic**: $$ D = 2 \sum_{i=1}^n \left[ y_i \ln\left(\frac{y_i}{\hat{\mu}_i}\right) - (y_i - \hat{\mu}_i) \right] $$
@@ -60,8 +60,7 @@ This fundamentally changes how we interpret the coefficients:
 
 * **Chi-Square Test (and its false alarms)**: Chi-square will capture any relationship between categorical features (both linear and non-linear). Since our GLMs mostly care about additive/linear overlap, Chi-square might trigger false alarms. Plus, with a large dataset, almost everything will flag as statistically significant anyway?
 * **Cramer's V**: Cramer's V from my understanding is Pearson's R for categorical data. Because Chi-square values blow up as your sample size grows, they are hard to interpret as a metric of "how bad is the overlap." Cramer's V takes that Chi-square value and scales it nicely between `0` (no association) and `1` (perfect association). If two categorical features have a super high Cramer's V, they are effectively feeding the model the exact same information, and we might want to drop one.
-* **Pearson's R**: For our standard continuous/ratio features, we'll just check the classic Pearson correlation matrix. If two continuous features have an R value close to 1 or -1, that's heavy collinearity.
-* **The Ridge Regression Fallback**: What if our features are highly correlated (Cramer's V or Pearson's R is really high)? Extreme collinearity makes our model's coefficients unstable. If this happens, we can apply an L2 penalty (Ridge Regression) to our Poisson or Negative Binomial model. Ridge mathematically forces the model to shrink the coefficients, reducing variance.
+* **Pearson's R**: For our standard continuous/ratio features, just check the classic Pearson correlation matrix
 
 ## Testing
 
@@ -74,12 +73,22 @@ This fundamentally changes how we interpret the coefficients:
 
 ## models to train
 
-* poisson regression
-* Negative binomial
-* potentially both of those with ridge regression if needed
+* **Poisson Regression (Standard GLM)**
+    * *Loss Function (Negative Log-Likelihood)*: $L(\mu, y) = \mu - y \ln(\mu)$ (ignoring the constant $\ln(y!)$ term, where $\mu$ is the expected count).
+    * Baseline model, assuming mean equals variance.
+* **Negative Binomial Regression (GLM)**
+    * *Loss Function (Negative Log-Likelihood)*: $L(\mu, \alpha, y) = -\left[ y \ln\left(\frac{\alpha \mu}{1 + \alpha \mu}\right) - \frac{1}{\alpha} \ln(1 + \alpha \mu) + \ln \Gamma\left(y + \frac{1}{\alpha}\right) \right]$ (ignoring constant terms).
+    * Relaxes the strict Poisson assumption by estimating a dispersion parameter ($\alpha$) to handle variance > mean.
+* **Regularized GLMs (Ridge/L2 Penalty)**
+    * *Loss Function*: Modifies the above objectives by adding an L2 penalty: $L_{\text{base}} + \lambda \sum \beta_j^2$.
+    * Used if collinearity is severe (e.g., high Cramer's V or Pearson's R) to shrink coefficients and stabilize the model.
+* **XGBoost (Poisson Objective)**
+    * *Loss Function*: Uses the Poisson negative log-likelihood: $L(\hat{y}, y) = \hat{y} - y \ln(\hat{y})$ (where $\hat{y}$ is the predicted count). XGBoost calculates the gradient and hessian of this loss to build its trees.
+    * its tree structure bypasses the more strict assumptions of GLMs. Maps complex non-linear patterns and feature interactions without manual feature engineering. by capturing these non-linearities, it eliminates issues with overdispersion and is more robust to collinearity than a GLM. Might be helpful depending on how the statistical testing on our features go?
+    * Downsides: If our features are largely independent and additive, a simple GLM might actually be a much better representation of the true data-generating process. XGBoost loses pure model interpretability (no explicit $\beta$ coefficients to explain exactly how much one feature drives tickets), and can easily overfit if not tuned carefully. It might be nice to be able to explain in our presentation which of our features drive?
 
 
 Week 12: visualization and statistical testing
-Week 13: finish up statistical testing and vis, start training
+Week 13: finish up statistical testing and vis, start model selection/training
 Week 14: finish presentation
 
