@@ -21,9 +21,9 @@ Since we are predicting a count (number of parking tickets), standard linear reg
 
 To fix the negative predictions problem, Poisson and Negative Binomial regression use a log link function: 
 $$ \ln(\text{Expected Counts}) = \beta_0 + \beta_1X_1 + \dots $$
-By modeling the *log* of the expected value, the actual prediction ($Y = e^{\text{linear equation}}$) is forced to be strictly positive.
+By modeling the log of the expected value, the actual prediction ($Y = e^{\text{linear equation}}$) is forced to be strictly positive.
 
-This fundamentally changes how we interpret the coefficients:
+This changes how we interpret the coefficients:
 
 * In standard OLS, a coefficient of $\beta = 2$ means "a 1-unit increase in X adds 2 to Y" (an additive effect).
 * In a Poisson/NB model, the effect is multiplicative. If a coefficient $\beta = 0.2$, the effect on $Y$ is $e^{0.2} \approx 1.22$. A 1-unit increase in X increases the ticket count by roughly 22%.
@@ -59,14 +59,14 @@ This fundamentally changes how we interpret the coefficients:
 ## Measuring co-linearity in both our categorical and ratio features
 
 * **Chi-Square Test (and its false alarms)**: Chi-square will capture any relationship between categorical features (both linear and non-linear). Since our GLMs mostly care about additive/linear overlap, Chi-square might trigger false alarms. Plus, with a large dataset, almost everything will flag as statistically significant anyway?
-* **Cramer's V**: Cramer's V from my understanding is Pearson's R for categorical data. Because Chi-square values blow up as your sample size grows, they are hard to interpret as a metric of "how bad is the overlap." Cramer's V takes that Chi-square value and scales it nicely between `0` (no association) and `1` (perfect association). If two categorical features have a super high Cramer's V, they are effectively feeding the model the exact same information, and we might want to drop one.
+* **Cramer's V**: Cramer's V from my understanding is Pearson's R for categorical data. Because Chi-square values blow up as your sample size grows, they are hard to interpret as a metric of "how bad is the overlap." Cramer's V takes that Chi-square value and scales it between `0` (no association) and `1` (perfect association). If two categorical features have a super high Cramer's V, they are effectively feeding the model the exact same information, and we might want to drop one.
 * **Pearson's R**: For our standard continuous/ratio features, just check the classic Pearson correlation matrix
 
 ## Testing
 
 * we need to measure the significance of our predictors relationship with both ticket count and with eachother
 * Types of visual analysis to build:
-    * **Target Variable Distribution (Histogram)**: Plot a histogram of daily ticket counts (`total_tickets`). This helps us actually see the right-skewed tail and visually confirm the overdispersion (i.e., checking if the variance looks huge compared to the mean).
+    * **Target Variable Distribution (Histogram)**: Plot a histogram of daily ticket counts (`total_tickets`). So we can see the right-skewed tail and visually confirm the overdispersion (i.e., checking if the variance looks huge compared to the mean).
     * **Categorical Features vs. Tickets (Box/Violin Plots)**: Plot `total_tickets` on the Y-axis and group by features like `WeekDay`, `Month`, or `is_holiday` on the X-axis.
     * **Continuous Features vs. Tickets (Scatter + KDE Smoothing)**: For weather data (`max_temp`, `precipitation`)
     * **Over-Time Trends (Line Chart with Rolling Averages)**: A 7-day or 30-day moving average of ticket counts plotted over time will smooth out the weekend dips and let us see the larger seasonality trends (e.g., summer peaks or pandemic-related drops?).
