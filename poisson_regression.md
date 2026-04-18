@@ -87,6 +87,9 @@ This changes how we interpret the coefficients:
     * its tree structure bypasses the more strict assumptions of GLMs. Maps complex non-linear patterns and feature interactions without manual feature engineering. by capturing these non-linearities, it eliminates issues with overdispersion and is more robust to collinearity than a GLM. Might be helpful depending on how the statistical testing on our features go?
     * Downsides: If our features are largely independent and additive, a simple GLM might actually be a much better representation of the true data-generating process. XGBoost loses pure model interpretability (no explicit $\beta$ coefficients to explain exactly how much one feature drives tickets), and can easily overfit if not tuned carefully. It might be nice to be able to explain in our presentation which of our features drive?
 
+**The bi-modal nature of the distribution is almost fully explained by the Sunday variable**
+If we were simply fitting the standard distribution via MLE, we would have an issue. However, since we are doing regression; we are really asking, "what is the formula that tells me where the mean should be for this specific data point?"
+
 
 Week 12: visualization and statistical testing
 Week 13: finish up statistical testing and vis, start model selection/training
