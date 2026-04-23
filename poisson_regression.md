@@ -41,6 +41,7 @@ This changes how we interpret the coefficients:
         * overdispersion arises “naturally” if important predictors are missing or functionally misspecified (e.g. linear instead of non-linear)
     * how would we measure the variance here? over what data? do we assume tickets are evenly spaced out over the day? this doesnt make sense?
 
+    
 ## Poisson vs. Negative Binomial
 
 * I'm realizing we should switch from Poisson Regression to Negative Binomial Regression to handle the overdispersion and lack of constant average over the period. The Negative Binomial (NB) regression framework is specifically designed to relax the "constant average rate" (homogeneity) assumption that restricts the standard Poisson model. While we don't actually know the rate that tickets occur over the course of a day, we can make a safe assumption that it is not at all constant.
@@ -79,6 +80,7 @@ This changes how we interpret the coefficients:
 * **Negative Binomial Regression (GLM)**
     * *Loss Function (Negative Log-Likelihood)*: $L(\mu, \alpha, y) = -\left[ y \ln\left(\frac{\alpha \mu}{1 + \alpha \mu}\right) - \frac{1}{\alpha} \ln(1 + \alpha \mu) + \ln \Gamma\left(y + \frac{1}{\alpha}\right) \right]$ (ignoring constant terms).
     * Relaxes the strict Poisson assumption by estimating a dispersion parameter ($\alpha$) to handle variance > mean.
+    * https://www.statsmodels.org/stable/generated/statsmodels.discrete.discrete_model.NegativeBinomial.html
 * **Regularized GLMs (Ridge/L2 Penalty)**
     * *Loss Function*: Modifies the above objectives by adding an L2 penalty: $L_{\text{base}} + \lambda \sum \beta_j^2$.
     * Used if collinearity is severe (e.g., high Cramer's V or Pearson's R) to shrink coefficients and stabilize the model.
@@ -90,8 +92,53 @@ This changes how we interpret the coefficients:
 **The bi-modal nature of the distribution is almost fully explained by the Sunday variable**
 If we were simply fitting the standard distribution via MLE, we would have an issue. However, since we are doing regression; we are really asking, "what is the formula that tells me where the mean should be for this specific data point?"
 
+### Features:
+
+- rolling average ticket count
+- time lagged snow emergency (snow emergencies often last into the next day and are often declared the night before )
+- day of week
+- month of year
+- binary holiday indicator
+- is weekend also good (it might be better to use is_sunday?)
+
+### Collinearity
+
+For our continuous and ordinal features, we can use Pearson’s correlation (for linear relationships) and Spearman’s rank correlation (for monotonic but possibly non-linear relationships) to check for collinearity. 
+
+Variance Inflation Factor (VIF) is another similar tool I just read about. It tells us how much the variance of a regression coefficient is inflated due to collinearity with other predictors. If we see a VIF much greater than 5 or 10, that’s a red flag for multicollinearity.
+
+$VIF_j = \frac{1}{1 - R_j^2}$
+
+For every single feature in the selected list, the process treats that feature as the target (y) and all the other features as the predictors (x)
+
+However,  a lot of our best features are binary (like is_holiday, is_weekend) or cyclical (day of week, month). Standard collinearity tests wont play nice with these . For binary features, we could look at Cramér’s V. For cyclical features, it gets trickier.
+
+#### Sine/Cosine Encoding for Cyclical Features
+
+For things like day of week or month, we could potentially  use sine and cosine transforms to capture their cyclical nature (so Monday is next to Sunday, December is next to January, etc.). This encoding lets the model see the periodicity better than if we just did one hot encoding. we could still check Spearman’s correlation between these encoded features and the response variable, but the relationship might not be monotonic so correlation is just a rough guide.
+
+#### Model Validation: Backtesting
+
+For time series, classic cross-validation doesn’t work because it would leak future information into the past. Instead, we can use some form of backtesting (a.k.a. rolling or expanding window validation). This means training on a chunk of the past, testing on the next chunk, and repeating—so every test set is always after its training set. There’s a great [Kaggle notebook on backtesting](https://www.kaggle.com/code/cworsnup/backtesting-cross-validation-for-timeseries) if you want to see code examples.
+
+
+
+#### MLFLow
+
+If you want we can use mlflow to log our features and metrics. I feel like it makes repeated training runs easier to track. I'm happy to set training classes up for poisson and negative binomial regression
+
+* https://mlflow.org/docs/latest/api_reference/python_api/mlflow.statsmodels.html
+* https://mlflow.org/docs/latest/api_reference/python_api/mlflow.sklearn.html
+
+I can set a wrapper around the training classes that let us pass in the dataframe and a list of features we want to use for that run and that way we can train in the background over the weekend?
+
+Another question is how much data we want to use for this? How many years? do we want to drop the covid dip?
+
+I can do outlier analysis after training 
 
 Week 12: visualization and statistical testing
 Week 13: finish up statistical testing and vis, start model selection/training
 Week 14: finish presentation
+
+I can do slides on the model and testing, you can do slides on the feature engineering/ selection? we could trade off on the viz slides?
 
