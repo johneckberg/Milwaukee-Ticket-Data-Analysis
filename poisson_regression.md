@@ -117,6 +117,8 @@ However,  a lot of our best features are binary (like is_holiday, is_weekend) or
 
 For things like day of week or month, we could potentially  use sine and cosine transforms to capture their cyclical nature (so Monday is next to Sunday, December is next to January, etc.). This encoding lets the model see the periodicity better than if we just did one hot encoding. we could still check Spearman’s correlation between these encoded features and the response variable, but the relationship might not be monotonic so correlation is just a rough guide.
 
+https://skforecast.org/latest/faq/cyclical-features-time-series.html
+
 #### Model Validation: Backtesting
 
 For time series, classic cross-validation doesn’t work because it would leak future information into the past. Instead, we can use some form of backtesting (a.k.a. rolling or expanding window validation). This means training on a chunk of the past, testing on the next chunk, and repeating—so every test set is always after its training set. There’s a great [Kaggle notebook on backtesting](https://www.kaggle.com/code/cworsnup/backtesting-cross-validation-for-timeseries) if you want to see code examples.
