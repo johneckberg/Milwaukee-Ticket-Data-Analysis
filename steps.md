@@ -24,8 +24,6 @@
     * Converting Street Addresses into Latitude and longitude points for visualization
     * Note: Exact address matching failed for many tickets for two main reasons: 1) manual data entry errors by parking enforcers (e.g., using approximate house numbers or "BLOCK"), and 2) the city's GIS Address Points dataset itself is incomplete, missing many valid, existing Milwaukee house addresses (verified via Google Maps). This justifies the use of a 100-block averaging fallback to map approximate ticket locations.
 
-
-
 ### Data analysis and visualization
 
 * Heat Mapping (filter on features)
@@ -61,3 +59,8 @@
 * Features we wanted but couldn't get
     * How city deficit and budget goals effects ticket count year over year
 * make a note on the geocoding issues
+
+Josiah feature engineering and visualization
+John research question and hypothesis, data modeling and results 
+
+I'll do the negative binomial 

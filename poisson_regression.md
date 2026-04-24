@@ -79,7 +79,7 @@ This changes how we interpret the coefficients:
     * Baseline model, assuming mean equals variance.
 * **Negative Binomial Regression (GLM)**
     * *Loss Function (Negative Log-Likelihood)*: $L(\mu, \alpha, y) = -\left[ y \ln\left(\frac{\alpha \mu}{1 + \alpha \mu}\right) - \frac{1}{\alpha} \ln(1 + \alpha \mu) + \ln \Gamma\left(y + \frac{1}{\alpha}\right) \right]$ (ignoring constant terms).
-    * Relaxes the strict Poisson assumption by estimating a dispersion parameter ($\alpha$) to handle variance > mean.
+    * Relaxes the strict Poisson assumption by estimating a dispersion parameter ($\alpha$) to handle variance > mean. **As the dispersion parameter (number of successes) in a negative binomial approaches infinity, it converges to a Poisson distribution**
     * https://www.statsmodels.org/stable/generated/statsmodels.discrete.discrete_model.NegativeBinomial.html
 * **Regularized GLMs (Ridge/L2 Penalty)**
     * *Loss Function*: Modifies the above objectives by adding an L2 penalty: $L_{\text{base}} + \lambda \sum \beta_j^2$.
@@ -121,8 +121,12 @@ https://skforecast.org/latest/faq/cyclical-features-time-series.html
 
 #### Model Validation: Backtesting
 
-For time series, classic cross-validation doesn’t work because it would leak future information into the past. Instead, we can use some form of backtesting (a.k.a. rolling or expanding window validation). This means training on a chunk of the past, testing on the next chunk, and repeating—so every test set is always after its training set. There’s a great [Kaggle notebook on backtesting](https://www.kaggle.com/code/cworsnup/backtesting-cross-validation-for-timeseries) if you want to see code examples.
+For time series, classic cross-validation doesn’t work because it would leak future information into the past. Instead, we can use some form of backtesting (a.k.a. rolling or expanding window validation). This means training on a chunk of the past, testing on the next chunk, and repeating—so every test set is always after its training set. There’s a great [Kaggle notebook on backtesting](https://www.kaggle.com/code/cworsnup/backtesting-cross-validation-for-timeseries) for code examples.
 
+we can see TimeSeriesSplit class from the scikit-learn library
+Im reading that it makes more sense to use sliding window backtesting for relatively frequent data like our daily counts
+https://www.uber.com/us/en/blog/omphalos/
+Maybe we could do a sliding window over 1 year at a time (dropping the covid period?) 
 
 
 #### MLFLow
