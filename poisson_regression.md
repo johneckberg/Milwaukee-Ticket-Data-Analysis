@@ -57,6 +57,13 @@ This changes how we interpret the coefficients:
     * **Deviance statistic**: $$ D = 2 \sum_{i=1}^n \left[ y_i \ln\left(\frac{y_i}{\hat{\mu}_i}\right) - (y_i - \hat{\mu}_i) \right] $$
         * *Notes*: Based on the likelihood ratio test, it compares the log-likelihood of your fitted model to a "saturated" model (a hypothetical model with a parameter for every observation that perfectly fits the data). As with the Pearson statistic, a residual deviance significantly larger than the residual degrees of freedom ($D / df > 1$) often indicates overdispersion or missing predictors.
 
+**Hard right tail means a large amount of overdispersion**
+
+A Negative Binomial (NB) model may fail to capture overdispersion if the variance exceeds the quadratic structure
+of the model
+
+What category of days causes this extreme overdispersion?
+
 ## Measuring co-linearity in both our categorical and ratio features
 
 * **Chi-Square Test (and its false alarms)**: Chi-square will capture any relationship between categorical features (both linear and non-linear). Since our GLMs mostly care about additive/linear overlap, Chi-square might trigger false alarms. Plus, with a large dataset, almost everything will flag as statistically significant anyway?
