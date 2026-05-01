@@ -155,3 +155,8 @@ Week 14: finish presentation
 
 I can do slides on the model and testing, you can do slides on the feature engineering/ selection? we could trade off on the viz slides?
 
+Why do we have to drop NaN? why are they appearing??
+Get more intuitive explanations for our metrics and add them to the slides
+overlay density estimates on top of each other 
+Can I use statsmode.summary on NB? No
+Note that for GLMs we dont have modeling guarantees on the residuals, we care about the distribution of the response variable
