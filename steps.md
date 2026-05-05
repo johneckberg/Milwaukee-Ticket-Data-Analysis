@@ -64,3 +64,7 @@ Josiah feature engineering and visualization
 John research question and hypothesis, data modeling and results 
 
 I'll do the negative binomial 
+
+add feature correlation testing?
+better emphasize the results discussion? maybe this is really talking about the two models
+future steps of testing non linear models like xgboost?
