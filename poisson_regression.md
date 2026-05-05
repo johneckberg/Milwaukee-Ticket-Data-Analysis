@@ -112,11 +112,11 @@ If we were simply fitting the standard distribution via MLE, we would have an is
 
 For our continuous and ordinal features, we can use Pearson’s correlation (for linear relationships) and Spearman’s rank correlation (for monotonic but possibly non-linear relationships) to check for collinearity. 
 
-Variance Inflation Factor (VIF) is another similar tool I just read about. It tells us how much the variance of a regression coefficient is inflated due to collinearity with other predictors. If we see a VIF much greater than 5 or 10, that’s a red flag for multicollinearity.
-
-$VIF_j = \frac{1}{1 - R_j^2}$
+Variance Inflation Factor (VIF) is a tool that tells us how much the variance of a regression coefficient is inflated due to collinearity with other predictors. If we see a VIF much greater than 5 or 10, that’s a red flag for multicollinearity.
 
 For every single feature in the selected list, the process treats that feature as the target (y) and all the other features as the predictors (x)
+
+$VIF_j = \frac{1}{1 - R_j^2}$
 
 However,  a lot of our best features are binary (like is_holiday, is_weekend) or cyclical (day of week, month). Standard collinearity tests wont play nice with these . For binary features, we could look at Cramér’s V. For cyclical features, it gets trickier.
 
