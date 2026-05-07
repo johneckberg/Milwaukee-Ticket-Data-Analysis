@@ -7830,7 +7830,7 @@ This project plans to examine how daily parking ticket activity in Milwaukee var
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [248]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [289]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -7838,6 +7838,17 @@ This project plans to examine how daily parking ticket activity in Milwaukee var
 <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=822bf2ff">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Initial-Visualization">Initial Visualization<a class="anchor-link" href="#Initial-Visualization">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7858,7 +7869,7 @@ Load the raw 2020 ticket dataset and prepare dates and columns.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [249]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [290]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># load tickets</span>
@@ -7883,7 +7894,7 @@ Load the raw 2020 ticket dataset and prepare dates and columns.</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[249]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[290]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7964,7 +7975,7 @@ Load the raw 2020 ticket dataset and prepare dates and columns.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [250]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [291]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># show types of viodescription</span>
@@ -7979,7 +7990,7 @@ Load the raw 2020 ticket dataset and prepare dates and columns.</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[250]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[291]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>VIODESCRIPTION
 METER PARKING VIOLATION                    70643
@@ -8015,7 +8026,7 @@ To efficiently geocode hundreds of thousands of addresses, we map ticket locatio
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [251]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [292]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># load the pre-cleaned address points data from city for geocoding</span>
@@ -8086,7 +8097,7 @@ There is a huge drop in parsed tickets during geocoding. The current model deman
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [252]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [293]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
@@ -8162,7 +8173,7 @@ Sample of Formatting/Other Issues:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [253]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [294]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">missing_df</span><span class="p">[</span><span class="n">missing_df</span><span class="p">[</span><span class="s1">'Category'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Formatting/Typo/Other'</span><span class="p">][</span><span class="s1">'OriginalAddress'</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
@@ -8176,7 +8187,7 @@ Sample of Formatting/Other Issues:
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[253]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[294]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0                               1307 N PROSPECT AV
 1                                 3217 N SUMMIT AV
@@ -8231,7 +8242,7 @@ To handle this, we can extract the "100-block" (e.g., 1755 -&gt; 1700 block) fro
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [254]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [295]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># parse Block Keys from the Master Address Dataset</span>
@@ -8343,7 +8354,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [255]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [296]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># filter plot df to look for patterns</span>
@@ -8365,7 +8376,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [256]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [297]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># animated interactive scatter map of tickets over time</span>
@@ -8417,7 +8428,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [257]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [298]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># density MapBox showing general heatmap of tickets spanning the whole year</span>
@@ -8465,7 +8476,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [258]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [299]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -8480,12 +8491,23 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f75b27a7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Full-Pre-processing">Full Pre-processing<a class="anchor-link" href="#Full-Pre-processing">¶</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5bfe8ea3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [259]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [300]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Loading in the parking data [All Years now]  --  Runs in about 10 mins</span>
@@ -8512,7 +8534,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[259]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[300]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8540,39 +8562,39 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 </thead>
 <tbody>
 <tr>
-<th>1587874</th>
-<td>492602854</td>
-<td>2016-07-22</td>
-<td>4744 N 58TH ST</td>
-<td>NIGHT PARKING - WRONG SIDE</td>
+<th>1828354</th>
+<td>100623003</td>
+<td>2016-12-17</td>
+<td>2555 N 21ST ST</td>
+<td>PARKING PROHIBITED BY OFFICIAL SIGN</td>
 </tr>
 <tr>
-<th>1469023</th>
-<td>491476860</td>
-<td>2016-05-07</td>
-<td>9116 W GRANTOSA DR</td>
+<th>4685552</th>
+<td>130364522</td>
+<td>2022-07-29</td>
+<td>1465 N FARWELL AV</td>
 <td>NIGHT PARKING</td>
 </tr>
 <tr>
-<th>138676</th>
-<td>476158141</td>
-<td>2014-03-21</td>
-<td>814 E WELLS ST</td>
-<td>METER PARKING VIOLATION</td>
+<th>2718647</th>
+<td>109723235</td>
+<td>2018-06-05</td>
+<td>6201 W KEEFE AVENUE PK</td>
+<td>NIGHT PARKING</td>
 </tr>
 <tr>
-<th>677844</th>
-<td>482235073</td>
+<th>677714</th>
+<td>482524372</td>
 <td>2015-01-24</td>
-<td>362 E BECHER ST</td>
-<td>NIGHT PARKING - WRONG SIDE</td>
+<td>2774 N MURRAY AVE</td>
+<td>NIGHT PARKING</td>
 </tr>
 <tr>
-<th>3947266</th>
-<td>122443156</td>
-<td>2021-02-02</td>
-<td>3713 W MAPLE ST</td>
-<td>SNOW EMERGENCY</td>
+<th>2501019</th>
+<td>107525762</td>
+<td>2018-02-04</td>
+<td>1224 E KANE PL</td>
+<td>NIGHT PARKING DURING DPW OPERATION</td>
 </tr>
 </tbody>
 </table>
@@ -8586,7 +8608,7 @@ Visualize spatial concentration and daily variations using Plotly Express mapbox
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [260]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [301]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tickets</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -8623,7 +8645,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [261]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [302]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># load in holiday data (https://www.kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021)</span>
@@ -8654,7 +8676,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [262]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [303]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#holidays_df = pd.read_csv("C:/Users/eckbergj/.vscode/Milwaukee-Ticket-Data-Analysis/data/US Holiday Dates (2004-2021).csv")</span>
@@ -8671,7 +8693,7 @@ memory usage: 148.5+ MB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[262]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[303]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8802,7 +8824,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [263]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [304]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># weather data (https://open-meteo.com/)  [extended from 2012 - 2022]</span>
@@ -8824,7 +8846,7 @@ memory usage: 148.5+ MB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[263]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[304]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8853,84 +8875,84 @@ memory usage: 148.5+ MB
 </thead>
 <tbody>
 <tr>
-<th>681</th>
-<td>2015-11-13</td>
-<td>6.7</td>
-<td>4.0</td>
+<th>704</th>
+<td>2015-12-06</td>
+<td>5.4</td>
+<td>1.7</td>
 <td>0.0</td>
 <td>0.00</td>
 </tr>
 <tr>
-<th>2378</th>
-<td>2020-07-06</td>
-<td>32.5</td>
-<td>22.1</td>
-<td>0.4</td>
+<th>1013</th>
+<td>2016-10-10</td>
+<td>16.6</td>
+<td>12.8</td>
+<td>0.0</td>
 <td>0.00</td>
 </tr>
 <tr>
-<th>9</th>
-<td>2014-01-10</td>
-<td>3.1</td>
-<td>-3.8</td>
-<td>13.4</td>
-<td>0.14</td>
+<th>2235</th>
+<td>2020-02-14</td>
+<td>-10.2</td>
+<td>-22.8</td>
+<td>0.0</td>
+<td>0.00</td>
 </tr>
 <tr>
-<th>2315</th>
-<td>2020-05-04</td>
-<td>6.5</td>
+<th>2737</th>
+<td>2021-06-30</td>
+<td>26.5</td>
+<td>17.8</td>
+<td>3.2</td>
+<td>0.00</td>
+</tr>
+<tr>
+<th>2031</th>
+<td>2019-07-25</td>
+<td>28.4</td>
+<td>18.3</td>
+<td>0.3</td>
+<td>0.00</td>
+</tr>
+<tr>
+<th>615</th>
+<td>2015-09-08</td>
+<td>22.2</td>
+<td>17.0</td>
+<td>11.3</td>
+<td>0.00</td>
+</tr>
+<tr>
+<th>326</th>
+<td>2014-11-23</td>
+<td>7.3</td>
+<td>4.9</td>
+<td>11.9</td>
+<td>0.00</td>
+</tr>
+<tr>
+<th>625</th>
+<td>2015-09-18</td>
+<td>21.0</td>
+<td>18.4</td>
+<td>20.9</td>
+<td>0.00</td>
+</tr>
+<tr>
+<th>556</th>
+<td>2015-07-11</td>
+<td>21.2</td>
+<td>16.5</td>
 <td>2.9</td>
-<td>0.0</td>
 <td>0.00</td>
 </tr>
 <tr>
-<th>2679</th>
-<td>2021-05-03</td>
-<td>19.7</td>
-<td>9.7</td>
-<td>13.3</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>1183</th>
-<td>2017-03-29</td>
-<td>5.3</td>
-<td>-1.1</td>
-<td>5.2</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>1369</th>
-<td>2017-10-01</td>
-<td>19.6</td>
-<td>11.0</td>
-<td>0.0</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>3221</th>
-<td>2022-10-27</td>
-<td>11.4</td>
-<td>0.2</td>
-<td>0.0</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>3220</th>
-<td>2022-10-26</td>
-<td>10.8</td>
-<td>2.4</td>
-<td>5.1</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>1024</th>
-<td>2016-10-21</td>
-<td>9.8</td>
-<td>8.3</td>
-<td>0.0</td>
-<td>0.00</td>
+<th>1524</th>
+<td>2018-03-05</td>
+<td>2.5</td>
+<td>-0.5</td>
+<td>3.5</td>
+<td>2.38</td>
 </tr>
 </tbody>
 </table>
@@ -8944,7 +8966,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [264]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [305]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># clean and align date keys before joining</span>
@@ -8990,7 +9012,7 @@ memory usage: 148.5+ MB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[264]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[305]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9023,64 +9045,64 @@ memory usage: 148.5+ MB
 </thead>
 <tbody>
 <tr>
-<th>3617017</th>
-<td>118827332</td>
-<td>111 N 75TH ST</td>
-<td>NIGHT PARKING - WRONG SIDE</td>
-<td>2019-12-31</td>
-<td>New Year’s Eve</td>
-<td>-0.7</td>
-<td>-5.5</td>
-<td>4.1</td>
-<td>2.87</td>
+<th>2456646</th>
+<td>106795441</td>
+<td>5433 W MARTIN DR</td>
+<td>NIGHT PARKING DURING DPW OPERATION</td>
+<td>2018-01-15</td>
+<td>Martin Luther King, Jr. Day</td>
+<td>-2.9</td>
+<td>-7.9</td>
+<td>5.0</td>
+<td>3.43</td>
 </tr>
 <tr>
-<th>3859135</th>
-<td>121456565</td>
-<td>2839 N 57TH ST</td>
-<td>NIGHT PARKING - WRONG SIDE</td>
-<td>2020-11-11</td>
-<td>Veterans Day</td>
-<td>7.5</td>
-<td>1.1</td>
-<td>0.0</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>716993</th>
-<td>482726274</td>
-<td>191 N BROADWAY ST</td>
+<th>4355439</th>
+<td>126733994</td>
+<td>319 E MENOMONEE ST</td>
 <td>METER PARKING VIOLATION</td>
-<td>2015-02-16</td>
-<td>Washington's Birthday</td>
-<td>-7.6</td>
-<td>-14.5</td>
+<td>2021-11-24</td>
+<td>Thanksgiving Eve</td>
+<td>9.5</td>
+<td>2.4</td>
 <td>0.0</td>
 <td>0.00</td>
 </tr>
 <tr>
-<th>3051562</th>
-<td>113054594</td>
-<td>2544 N 45TH ST</td>
-<td>PARKING PROHIBITED BY OFFICIAL SIGN</td>
-<td>2018-12-25</td>
-<td>Christmas Day</td>
-<td>3.9</td>
-<td>-3.0</td>
-<td>1.2</td>
-<td>0.84</td>
+<th>625060</th>
+<td>481822843</td>
+<td>1629 E ROYALL PL</td>
+<td>PARKED IN EXCESS OF 2 HOURS PROHIBITED</td>
+<td>2014-12-24</td>
+<td>Christmas Eve</td>
+<td>3.2</td>
+<td>1.6</td>
+<td>1.4</td>
+<td>0.00</td>
 </tr>
 <tr>
-<th>4389318</th>
-<td>127059096</td>
-<td>5113 N 38TH ST</td>
-<td>PARKED WRONG DIRECTION</td>
-<td>2021-12-25</td>
-<td>Christmas Day</td>
-<td>7.2</td>
-<td>-1.2</td>
-<td>1.5</td>
+<th>3699529</th>
+<td>119666783</td>
+<td>2005 W JUNEAU AV</td>
+<td>NIGHT PARKING</td>
+<td>2020-02-14</td>
+<td>Valentine’s Day</td>
+<td>-10.2</td>
+<td>-22.8</td>
+<td>0.0</td>
 <td>0.00</td>
+</tr>
+<tr>
+<th>1839604</th>
+<td>100775905</td>
+<td>2760 S DELAWARE AV</td>
+<td>NIGHT PARKING</td>
+<td>2016-12-24</td>
+<td>Christmas Eve</td>
+<td>1.4</td>
+<td>0.5</td>
+<td>0.0</td>
+<td>0.07</td>
 </tr>
 </tbody>
 </table>
@@ -9105,7 +9127,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [265]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [306]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Use Pandas DateTime to get WeekDay, Day (number), Month, Year from each ticket's join_date (ISSUEDATE)</span>
@@ -9125,7 +9147,7 @@ memory usage: 148.5+ MB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[265]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[306]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9162,84 +9184,84 @@ memory usage: 148.5+ MB
 </thead>
 <tbody>
 <tr>
-<th>4116696</th>
-<td>124004801</td>
-<td>1720 N ARLINGTON PL</td>
-<td>METER PARKING VIOLATION</td>
-<td>2021-06-05</td>
-<td>NaN</td>
-<td>35.5</td>
-<td>21.2</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>Saturday</td>
-<td>5</td>
-<td>6</td>
-<td>2021</td>
-</tr>
-<tr>
-<th>786788</th>
-<td>483704933</td>
-<td>1654 S 9TH ST</td>
-<td>METER PARKING VIOLATION</td>
-<td>2015-03-27</td>
-<td>NaN</td>
-<td>-2.2</td>
-<td>-6.0</td>
-<td>0.2</td>
-<td>0.28</td>
-<td>Friday</td>
-<td>27</td>
-<td>3</td>
-<td>2015</td>
-</tr>
-<tr>
-<th>226835</th>
-<td>477005723</td>
-<td>4040 N MONTREAL ST</td>
+<th>3367695</th>
+<td>116237321</td>
+<td>4541 W LEON TR</td>
 <td>NIGHT PARKING</td>
-<td>2014-05-13</td>
+<td>2019-07-24</td>
 <td>NaN</td>
-<td>16.5</td>
-<td>12.0</td>
-<td>6.9</td>
-<td>0.00</td>
-<td>Tuesday</td>
-<td>13</td>
-<td>5</td>
-<td>2014</td>
-</tr>
-<tr>
-<th>2981914</th>
-<td>112377285</td>
-<td>3459 N FREDERICK AV</td>
-<td>PARKED IN EXCESS OF 1 HOUR PROHIBITED</td>
-<td>2018-11-08</td>
-<td>NaN</td>
-<td>2.9</td>
-<td>-2.5</td>
+<td>25.5</td>
+<td>13.3</td>
 <td>0.0</td>
-<td>0.00</td>
-<td>Thursday</td>
-<td>8</td>
-<td>11</td>
-<td>2018</td>
-</tr>
-<tr>
-<th>4210390</th>
-<td>125157340</td>
-<td>8628 W GRANTOSA DR</td>
-<td>NIGHT PARKING</td>
-<td>2021-08-11</td>
-<td>NaN</td>
-<td>33.0</td>
-<td>22.0</td>
-<td>8.2</td>
 <td>0.00</td>
 <td>Wednesday</td>
-<td>11</td>
-<td>8</td>
+<td>24</td>
+<td>7</td>
+<td>2019</td>
+</tr>
+<tr>
+<th>1346319</th>
+<td>489872121</td>
+<td>725 N 13TH ST</td>
+<td>IMPROPERLY DISPLAYED VEHICLE REGISTRATION</td>
+<td>2016-02-25</td>
+<td>NaN</td>
+<td>0.3</td>
+<td>-2.2</td>
+<td>0.1</td>
+<td>0.49</td>
+<td>Thursday</td>
+<td>25</td>
+<td>2</td>
+<td>2016</td>
+</tr>
+<tr>
+<th>4240558</th>
+<td>125484741</td>
+<td>213 W HIGHLAND AV</td>
+<td>METER PARKING VIOLATION</td>
+<td>2021-09-01</td>
+<td>NaN</td>
+<td>23.0</td>
+<td>17.3</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>Wednesday</td>
+<td>1</td>
+<td>9</td>
 <td>2021</td>
+</tr>
+<tr>
+<th>4292390</th>
+<td>126098700</td>
+<td>1724 N ARLINGTON PL</td>
+<td>NIGHT PARKING</td>
+<td>2021-10-07</td>
+<td>NaN</td>
+<td>19.3</td>
+<td>17.2</td>
+<td>9.4</td>
+<td>0.00</td>
+<td>Thursday</td>
+<td>7</td>
+<td>10</td>
+<td>2021</td>
+</tr>
+<tr>
+<th>3167463</th>
+<td>114281112</td>
+<td>2848 N 76TH ST</td>
+<td>NIGHT PARKING</td>
+<td>2019-03-09</td>
+<td>NaN</td>
+<td>2.2</td>
+<td>-8.4</td>
+<td>19.4</td>
+<td>4.06</td>
+<td>Saturday</td>
+<td>9</td>
+<td>3</td>
+<td>2019</td>
 </tr>
 </tbody>
 </table>
@@ -9253,7 +9275,7 @@ memory usage: 148.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [266]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [307]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># See what Violation categories can be made out of the data</span>
@@ -9268,7 +9290,7 @@ memory usage: 148.5+ MB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[266]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[307]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>VIODESCRIPTION
 NIGHT PARKING                                1527527
@@ -9292,7 +9314,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [267]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [308]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Feature for  Winter Storm? Inclement Weather?  Threshold can be adjusted </span>
@@ -9334,7 +9356,7 @@ Name: count, Length: 90, dtype: int64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[267]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[308]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9379,58 +9401,154 @@ Name: count, Length: 90, dtype: int64</pre>
 </thead>
 <tbody>
 <tr>
-<th>1181856</th>
-<td>488339972</td>
-<td>2309 N MURRAY AV</td>
-<td>METER PARKING VIOLATION</td>
-<td>2015-11-25</td>
-<td>Thanksgiving Eve</td>
-<td>8.5</td>
-<td>4.9</td>
-<td>0.2</td>
-<td>0.00</td>
-<td>Wednesday</td>
-<td>...</td>
-<td>2015</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<th>3002704</th>
-<td>112479846</td>
-<td>5431 N 41ST ST</td>
-<td>UNREGISTERED/ IMPROPERLY REGISTERED VEHICLE</td>
-<td>2018-11-22</td>
-<td>Thanksgiving Day</td>
-<td>1.8</td>
-<td>-1.5</td>
+<th>2529663</th>
+<td>107748185</td>
+<td>1552 N 7TH ST</td>
+<td>NIGHT PARKING - WRONG SIDE</td>
+<td>2018-02-14</td>
+<td>Valentine’s Day</td>
+<td>5.7</td>
+<td>-4.7</td>
 <td>0.0</td>
 <td>0.00</td>
-<td>Thursday</td>
+<td>Wednesday</td>
 <td>...</td>
 <td>2018</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 <td>1</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
 </tr>
 <tr>
-<th>1932146</th>
-<td>101606363</td>
-<td>5029 N 50TH ST</td>
-<td>PARKED WITHIN 4 FEET OF DRIVE OR ALLEY</td>
+<th>3616661</th>
+<td>118871594</td>
+<td>268 E MENOMONEE ST</td>
+<td>METER PARKING VIOLATION</td>
+<td>2019-12-31</td>
+<td>New Year’s Eve</td>
+<td>-0.7</td>
+<td>-5.5</td>
+<td>4.1</td>
+<td>2.87</td>
+<td>Tuesday</td>
+<td>...</td>
+<td>2019</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1654331</th>
+<td>493056373</td>
+<td>5757 N 92ND ST</td>
+<td>NIGHT PARKING - WRONG SIDE</td>
+<td>2016-09-03</td>
+<td>Labor Day Weekend</td>
+<td>21.6</td>
+<td>18.3</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>Saturday</td>
+<td>...</td>
+<td>2016</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1655183</th>
+<td>493129560</td>
+<td>633 S 6TH ST</td>
+<td>PARKING PROHIBITED BY OFFICIAL SIGN</td>
+<td>2016-09-05</td>
+<td>Labor Day</td>
+<td>25.3</td>
+<td>20.4</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>Monday</td>
+<td>...</td>
+<td>2016</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>635564</th>
+<td>481961513</td>
+<td>1716 E KENWOOD BLVD</td>
+<td>NIGHT PARKING</td>
+<td>2014-12-31</td>
+<td>New Year’s Eve</td>
+<td>-7.0</td>
+<td>-13.8</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>Wednesday</td>
+<td>...</td>
+<td>2014</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>715749</th>
+<td>482693466</td>
+<td>1556 N FARWELL AVE</td>
+<td>PARKED IN LOADING ZONE</td>
+<td>2015-02-14</td>
+<td>Valentine’s Day</td>
+<td>-4.7</td>
+<td>-17.4</td>
+<td>0.0</td>
+<td>0.14</td>
+<td>Saturday</td>
+<td>...</td>
+<td>2015</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1932708</th>
+<td>101637384</td>
+<td>4825 N 39TH ST</td>
+<td>NIGHT PARKING</td>
 <td>2017-02-14</td>
 <td>Valentine’s Day</td>
 <td>9.2</td>
@@ -9443,7 +9561,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -9451,122 +9569,26 @@ Name: count, Length: 90, dtype: int64</pre>
 <td>1</td>
 </tr>
 <tr>
-<th>2929061</th>
-<td>111798923</td>
-<td>1932 N FARWELL AV</td>
-<td>METER PARKING VIOLATION</td>
-<td>2018-10-08</td>
-<td>Columbus Day</td>
-<td>27.1</td>
-<td>14.2</td>
-<td>10.6</td>
+<th>1183409</th>
+<td>488245096</td>
+<td>2741 N 44TH ST</td>
+<td>NIGHT PARKING - WRONG SIDE</td>
+<td>2015-11-25</td>
+<td>Thanksgiving Eve</td>
+<td>8.5</td>
+<td>4.9</td>
+<td>0.2</td>
 <td>0.00</td>
-<td>Monday</td>
-<td>...</td>
-<td>2018</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<th>3654528</th>
-<td>119310424</td>
-<td>1812 S 29TH ST</td>
-<td>SNOW EMERGENCY 2nd VIOLATION</td>
-<td>2020-01-20</td>
-<td>Martin Luther King, Jr. Day</td>
-<td>-4.4</td>
-<td>-12.5</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>Monday</td>
-<td>...</td>
-<td>2020</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<th>1054835</th>
-<td>486770421</td>
-<td>9624 W BEATRICE ST</td>
-<td>NIGHT PARKING</td>
-<td>2015-09-05</td>
-<td>Labor Day Weekend</td>
-<td>22.9</td>
-<td>18.0</td>
-<td>3.7</td>
-<td>0.00</td>
-<td>Saturday</td>
+<td>Wednesday</td>
 <td>...</td>
 <td>2015</td>
 <td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<th>3132254</th>
-<td>113392635</td>
-<td>208 W WASHINGTON ST</td>
-<td>NIGHT PARKING DURING DPW OPERATION</td>
-<td>2019-02-14</td>
-<td>Valentine’s Day</td>
-<td>4.8</td>
-<td>-7.7</td>
-<td>0.1</td>
-<td>0.07</td>
-<td>Thursday</td>
-<td>...</td>
-<td>2019</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<th>3427584</th>
-<td>116794366</td>
-<td>2531 N BREMEN ST</td>
-<td>NIGHT PARKING</td>
-<td>2019-08-31</td>
-<td>Labor Day Weekend</td>
-<td>21.0</td>
-<td>12.4</td>
-<td>0.2</td>
-<td>0.00</td>
-<td>Saturday</td>
-<td>...</td>
-<td>2019</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
 <td>0</td>
 <td>1</td>
 </tr>
@@ -9583,7 +9605,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [268]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [309]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Compressing into a Daily Format: Row per Day, with Ticket Counts and Weather/Holiday Features to be able to then predict the Daily Rate of parking tickets (and the features that affect that)</span>
@@ -9624,7 +9646,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [269]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [310]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># add in LAGGED Snow Emergency Feature (if yesterday (or 2 days ago) was a snow emergency, does that affect the number of tickets issued today?)</span>
@@ -9648,7 +9670,7 @@ Name: count, Length: 90, dtype: int64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[269]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[310]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9693,244 +9715,244 @@ Name: count, Length: 90, dtype: int64</pre>
 </thead>
 <tbody>
 <tr>
-<th>1223</th>
-<td>2017-05-08</td>
-<td>1337</td>
-<td>8.9</td>
-<td>0.4</td>
+<th>2858</th>
+<td>2021-10-29</td>
+<td>917</td>
+<td>12.5</td>
+<td>10.9</td>
+<td>7.3</td>
 <td>0.0</td>
-<td>0.00</td>
+<td>0</td>
+<td>1</td>
+<td>Friday</td>
+<td>2021</td>
+<td>...</td>
+<td>29</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>221</td>
+<td>370</td>
+<td>39</td>
+<td>70</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>1058</th>
+<td>2016-11-24</td>
+<td>199</td>
+<td>5.5</td>
+<td>3.2</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0</td>
+<td>Thursday</td>
+<td>2016</td>
+<td>...</td>
+<td>24</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>120</td>
+<td>6</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>131</th>
+<td>2014-05-12</td>
+<td>1446</td>
+<td>16.4</td>
+<td>9.5</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>0</td>
+<td>1</td>
+<td>Monday</td>
+<td>2014</td>
+<td>...</td>
+<td>12</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>533</td>
+<td>467</td>
+<td>113</td>
+<td>109</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>3099</th>
+<td>2022-06-27</td>
+<td>637</td>
+<td>23.8</td>
+<td>14.9</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>0</td>
 <td>0</td>
 <td>Monday</td>
+<td>2022</td>
+<td>...</td>
+<td>27</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>106</td>
+<td>314</td>
+<td>53</td>
+<td>38</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>1340</th>
+<td>2017-09-02</td>
+<td>1330</td>
+<td>21.5</td>
+<td>10.3</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0</td>
+<td>1</td>
+<td>Saturday</td>
 <td>2017</td>
+<td>...</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>99</td>
+<td>981</td>
+<td>103</td>
+<td>43</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>2472</th>
+<td>2020-10-08</td>
+<td>1071</td>
+<td>17.6</td>
+<td>9.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0</td>
+<td>Thursday</td>
+<td>2020</td>
 <td>...</td>
 <td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>250</td>
-<td>690</td>
-<td>123</td>
-<td>44</td>
+<td>418</td>
+<td>0</td>
+<td>0</td>
+<td>180</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr>
-<th>1164</th>
-<td>2017-03-10</td>
-<td>1841</td>
-<td>-0.0</td>
-<td>-7.0</td>
+<th>1598</th>
+<td>2018-05-18</td>
+<td>1650</td>
+<td>15.8</td>
+<td>7.8</td>
+<td>1.8</td>
 <td>0.0</td>
-<td>0.00</td>
 <td>0</td>
 <td>0</td>
 <td>Friday</td>
-<td>2017</td>
-<td>...</td>
-<td>10</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>298</td>
-<td>1062</td>
-<td>87</td>
-<td>97</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>1359</th>
-<td>2017-09-21</td>
-<td>1858</td>
-<td>27.9</td>
-<td>20.2</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Thursday</td>
-<td>2017</td>
-<td>...</td>
-<td>21</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>207</td>
-<td>1141</td>
-<td>126</td>
-<td>69</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>343</th>
-<td>2014-12-10</td>
-<td>2807</td>
-<td>-0.4</td>
-<td>-1.7</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Wednesday</td>
-<td>2014</td>
-<td>...</td>
-<td>10</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>632</td>
-<td>1299</td>
-<td>118</td>
-<td>216</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>530</th>
-<td>2015-06-15</td>
-<td>1071</td>
-<td>20.8</td>
-<td>16.9</td>
-<td>29.3</td>
-<td>0.00</td>
-<td>0</td>
-<td>1</td>
-<td>Monday</td>
-<td>2015</td>
-<td>...</td>
-<td>15</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>213</td>
-<td>466</td>
-<td>72</td>
-<td>84</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>2103</th>
-<td>2019-10-05</td>
-<td>1365</td>
-<td>14.6</td>
-<td>11.1</td>
-<td>6.4</td>
-<td>0.00</td>
-<td>0</td>
-<td>1</td>
-<td>Saturday</td>
-<td>2019</td>
-<td>...</td>
-<td>5</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>74</td>
-<td>1018</td>
-<td>89</td>
-<td>15</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>278</th>
-<td>2014-10-06</td>
-<td>1433</td>
-<td>13.2</td>
-<td>9.2</td>
-<td>0.6</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Monday</td>
-<td>2014</td>
-<td>...</td>
-<td>6</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>469</td>
-<td>548</td>
-<td>93</td>
-<td>84</td>
-<td>0.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<th>1963</th>
-<td>2019-05-18</td>
-<td>1152</td>
-<td>14.1</td>
-<td>5.1</td>
-<td>6.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>1</td>
-<td>Saturday</td>
-<td>2019</td>
+<td>2018</td>
 <td>...</td>
 <td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>169</td>
+<td>995</td>
+<td>102</td>
+<td>71</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>669</th>
+<td>2015-11-01</td>
+<td>176</td>
+<td>13.1</td>
+<td>9.5</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0</td>
+<td>Sunday</td>
+<td>2015</td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>113</td>
-<td>624</td>
-<td>129</td>
-<td>30</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr>
-<th>2273</th>
-<td>2020-03-23</td>
-<td>276</td>
-<td>7.7</td>
-<td>-3.9</td>
-<td>1.3</td>
-<td>0.91</td>
+<th>114</th>
+<td>2014-04-25</td>
+<td>1954</td>
+<td>12.3</td>
+<td>4.2</td>
+<td>7.9</td>
+<td>0.0</td>
 <td>0</td>
-<td>0</td>
-<td>Monday</td>
-<td>2020</td>
+<td>1</td>
+<td>Friday</td>
+<td>2014</td>
 <td>...</td>
-<td>23</td>
+<td>25</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>160</td>
-<td>0</td>
+<td>591</td>
+<td>800</td>
+<td>106</td>
+<td>166</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr>
-<th>1966</th>
-<td>2019-05-21</td>
-<td>2547</td>
-<td>11.3</td>
-<td>5.8</td>
-<td>0.5</td>
-<td>0.00</td>
+<th>1845</th>
+<td>2019-01-20</td>
+<td>2076</td>
+<td>-11.5</td>
+<td>-17.1</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>0</td>
 <td>0</td>
-<td>Tuesday</td>
+<td>Sunday</td>
 <td>2019</td>
 <td>...</td>
-<td>21</td>
+<td>20</td>
+<td>1</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>335</td>
-<td>1587</td>
-<td>204</td>
-<td>64</td>
-<td>0.0</td>
-<td>0.0</td>
+<td>1933</td>
+<td>18</td>
+<td>11</td>
+<td>1.0</td>
+<td>1.0</td>
 </tr>
 </tbody>
 </table>
@@ -9945,7 +9967,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [270]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [311]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># convert month and week features into cosine and sine transformations to capture cyclical nature </span>
@@ -9973,7 +9995,7 @@ Name: count, Length: 90, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Visualization-&amp;-Statistical-Testing">Visualization &amp; Statistical Testing<a class="anchor-link" href="#Visualization-&amp;-Statistical-Testing">¶</a></h3>
+<h3 id="Visualization-&amp;-Statistical-Testing-(EDA)">Visualization &amp; Statistical Testing (EDA)<a class="anchor-link" href="#Visualization-&amp;-Statistical-Testing-(EDA)">¶</a></h3>
 </div>
 </div>
 </div>
@@ -9982,7 +10004,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [271]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [312]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span>
@@ -10061,7 +10083,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [272]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [313]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># WeekDay	Year	Month	Day	 is_weekend	is_holiday  </span>
@@ -10122,7 +10144,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [273]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [314]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Dataframe is sorted chronologically</span>
@@ -10183,7 +10205,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [274]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [315]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># normalize rolling average AFTER visualization</span>
@@ -10201,7 +10223,7 @@ Name: count, Length: 90, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [275]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [316]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Statistical Testing -- Temporal Features</span>
@@ -10287,9 +10309,6 @@ Day_vs_tickets: Kruskal-Wallis H-statistic = 21.845, p-value = 0.86
 is_weekend_vs_tickets: Mann-Whitney statistic = 348076.500, p-value = 7.82e-207
 is_holiday_vs_tickets: Mann-Whitney statistic = 129111.000, p-value = 8.79e-21
 is_sunday_vs_tickets: Mann-Whitney statistic = 55542.500, p-value = 5.18e-222
-is_weekend_vs_tickets: Mann-Whitney statistic = 348076.500, p-value = 7.82e-207
-is_holiday_vs_tickets: Mann-Whitney statistic = 129111.000, p-value = 8.79e-21
-is_sunday_vs_tickets: Mann-Whitney statistic = 55542.500, p-value = 5.18e-222
 </pre>
 </div>
 </div>
@@ -10311,7 +10330,7 @@ is_sunday_vs_tickets: Mann-Whitney statistic = 55542.500, p-value = 5.18e-222
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [276]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [317]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Group by weekday and calculate the mean (single average number for each day)  for each sub-count</span>
@@ -10366,7 +10385,7 @@ is_sunday_vs_tickets: Mann-Whitney statistic = 55542.500, p-value = 5.18e-222
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [277]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [318]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Statistical Testing -- Violation subcount Features</span>
@@ -10411,7 +10430,7 @@ registration_tickets_count_vs_WeekDay: Kruskal-Wallis H-statistic = 886.000, p-v
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Weather Features</p>
+<h3 id="Weather-Features">Weather Features<a class="anchor-link" href="#Weather-Features">¶</a></h3>
 </div>
 </div>
 </div>
@@ -10420,7 +10439,7 @@ registration_tickets_count_vs_WeekDay: Kruskal-Wallis H-statistic = 886.000, p-v
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [278]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [319]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Weather and tickets issued: separate plots</span>
@@ -10562,7 +10581,7 @@ registration_tickets_count_vs_WeekDay: Kruskal-Wallis H-statistic = 886.000, p-v
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [279]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [320]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># spearman correlations</span>
@@ -10654,7 +10673,7 @@ Chi-squared test for Snow Emergency (Lag 2) vs. Total Tickets (binned): chi2 = 4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [280]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [321]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># bonferroni correction for multiple testing (both temporal and weather features)</span>
@@ -10720,7 +10739,7 @@ is_snow_emergency_lag2_vs_tickets_chi2: statistic = 48.538, corrected p-value = 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [281]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [322]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.outliers_influence</span><span class="w"> </span><span class="kn">import</span> <span class="n">variance_inflation_factor</span>
@@ -10807,7 +10826,7 @@ memory usage: 356.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [282]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [323]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># calculate VIF for each feature</span>
@@ -10879,7 +10898,7 @@ memory usage: 356.4 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Modeling">Modeling<a class="anchor-link" href="#Modeling">¶</a></h3>
+<h3 id="Modeling-&amp;-Validation">Modeling &amp; Validation<a class="anchor-link" href="#Modeling-&amp;-Validation">¶</a></h3>
 </div>
 </div>
 </div>
@@ -10888,7 +10907,7 @@ memory usage: 356.4 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [283]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [324]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># loop for Negative Binomial regression with rolling window cross-validation</span>
@@ -11077,7 +11096,7 @@ Final model performance on held-out test set (2022-2023): Pearson/df = 0.72, Dev
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [284]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [325]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># model.summary()</span>
@@ -11093,7 +11112,7 @@ Final model performance on held-out test set (2022-2023): Pearson/df = 0.72, Dev
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [285]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [326]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Build Poisson Regression Model (as a baseline to Negative Binomial) with the same features and rolling window cross-validation</span>
@@ -11238,12 +11257,23 @@ Final POISSON model performance on held-out test set (2022-2023): Pearson/df = 1
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb6d4a3d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Results-Graphics">Results Graphics<a class="anchor-link" href="#Results-Graphics">¶</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=298060b9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [286]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [327]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># overlay the logged prediction counts with the actual daily ticket values</span>
@@ -11303,7 +11333,7 @@ Final POISSON model performance on held-out test set (2022-2023): Pearson/df = 1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [287]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [328]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># overlay KDE plot for actual vs. predicted daily ticket counts for both models</span>
@@ -11383,7 +11413,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [288]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [329]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">daily_summary_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
@@ -11397,7 +11427,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[288]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[329]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11442,196 +11472,196 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </thead>
 <tbody>
 <tr>
-<th>606</th>
-<td>2015-08-30</td>
-<td>90</td>
-<td>21.0</td>
-<td>15.4</td>
+<th>675</th>
+<td>2015-11-07</td>
+<td>1213</td>
+<td>8.9</td>
+<td>5.8</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>0</td>
+<td>0</td>
+<td>Saturday</td>
+<td>2015</td>
+<td>...</td>
+<td>-0.974928</td>
+<td>-0.222521</td>
+<td>0.988468</td>
+<td>0.151428</td>
+<td>0.616963</td>
+<td>No</td>
+<td>(977.4, 1947.8]</td>
+<td>NaN</td>
+<td>1596.516303</td>
+<td>1589.244134</td>
+</tr>
+<tr>
+<th>2811</th>
+<td>2021-09-12</td>
+<td>197</td>
+<td>23.3</td>
+<td>16.4</td>
+<td>21.8</td>
+<td>0.00</td>
+<td>0</td>
+<td>1</td>
+<td>Sunday</td>
+<td>2021</td>
+<td>...</td>
+<td>-0.781831</td>
+<td>0.623490</td>
+<td>0.651372</td>
+<td>-0.758758</td>
+<td>0.532796</td>
+<td>No</td>
+<td>(2.148, 977.4]</td>
+<td>NaN</td>
+<td>356.769289</td>
+<td>347.143412</td>
+</tr>
+<tr>
+<th>1633</th>
+<td>2018-06-22</td>
+<td>2114</td>
+<td>15.5</td>
+<td>12.1</td>
+<td>12.9</td>
+<td>0.00</td>
+<td>0</td>
+<td>1</td>
+<td>Friday</td>
+<td>2018</td>
+<td>...</td>
+<td>-0.433884</td>
+<td>-0.900969</td>
+<td>-0.968077</td>
+<td>-0.250653</td>
+<td>0.655087</td>
+<td>No</td>
+<td>(1947.8, 2918.2]</td>
+<td>NaN</td>
+<td>1782.677586</td>
+<td>1757.093615</td>
+</tr>
+<tr>
+<th>3211</th>
+<td>2022-10-17</td>
+<td>548</td>
+<td>5.9</td>
+<td>1.2</td>
+<td>0.3</td>
+<td>0.14</td>
+<td>0</td>
+<td>0</td>
+<td>Monday</td>
+<td>2022</td>
+<td>...</td>
+<td>0.000000</td>
+<td>1.000000</td>
+<td>-0.299363</td>
+<td>-0.954139</td>
+<td>0.441622</td>
+<td>No</td>
+<td>(2.148, 977.4]</td>
+<td>NaN</td>
+<td>1102.877154</td>
+<td>1165.144540</td>
+</tr>
+<tr>
+<th>513</th>
+<td>2015-05-29</td>
+<td>2193</td>
+<td>18.4</td>
+<td>14.3</td>
+<td>7.6</td>
+<td>0.00</td>
+<td>0</td>
+<td>1</td>
+<td>Friday</td>
+<td>2015</td>
+<td>...</td>
+<td>-0.433884</td>
+<td>-0.900969</td>
+<td>-0.394356</td>
+<td>0.918958</td>
+<td>0.707407</td>
+<td>No</td>
+<td>(1947.8, 2918.2]</td>
+<td>NaN</td>
+<td>1903.918196</td>
+<td>1869.252790</td>
+</tr>
+<tr>
+<th>2411</th>
+<td>2020-08-08</td>
+<td>317</td>
+<td>31.2</td>
+<td>19.0</td>
+<td>1.1</td>
+<td>0.00</td>
+<td>0</td>
+<td>0</td>
+<td>Saturday</td>
+<td>2020</td>
+<td>...</td>
+<td>-0.974928</td>
+<td>-0.222521</td>
+<td>0.998717</td>
+<td>-0.050649</td>
+<td>0.197384</td>
+<td>No</td>
+<td>(2.148, 977.4]</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1327</th>
+<td>2017-08-20</td>
+<td>202</td>
+<td>30.0</td>
+<td>17.0</td>
 <td>0.0</td>
 <td>0.00</td>
 <td>0</td>
 <td>0</td>
 <td>Sunday</td>
-<td>2015</td>
+<td>2017</td>
 <td>...</td>
 <td>-0.781831</td>
 <td>0.623490</td>
-<td>-2.012985e-01</td>
-<td>0.979530</td>
-<td>0.631227</td>
+<td>-0.790776</td>
+<td>-0.612106</td>
+<td>0.552058</td>
 <td>No</td>
 <td>(2.148, 977.4]</td>
 <td>NaN</td>
-<td>191.657406</td>
-<td>195.234684</td>
+<td>231.089076</td>
+<td>222.823273</td>
 </tr>
 <tr>
-<th>1295</th>
-<td>2017-07-19</td>
-<td>2430</td>
-<td>24.4</td>
-<td>20.1</td>
-<td>0.0</td>
-<td>0.00</td>
+<th>3272</th>
+<td>2022-12-17</td>
+<td>1201</td>
+<td>-1.5</td>
+<td>-6.2</td>
+<td>0.7</td>
+<td>0.49</td>
 <td>0</td>
 <td>0</td>
-<td>Wednesday</td>
-<td>2017</td>
-<td>...</td>
-<td>0.974928</td>
-<td>-0.222521</td>
-<td>-6.513725e-01</td>
-<td>-0.758758</td>
-<td>0.599353</td>
-<td>No</td>
-<td>(1947.8, 2918.2]</td>
-<td>NaN</td>
-<td>2319.959078</td>
-<td>2260.927294</td>
-</tr>
-<tr>
-<th>159</th>
-<td>2014-06-09</td>
-<td>1649</td>
-<td>13.8</td>
-<td>10.1</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Monday</td>
-<td>2014</td>
-<td>...</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>9.680771e-01</td>
-<td>-0.250653</td>
-<td>0.642090</td>
-<td>No</td>
-<td>(977.4, 1947.8]</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>530</th>
-<td>2015-06-15</td>
-<td>1071</td>
-<td>20.8</td>
-<td>16.9</td>
-<td>29.3</td>
-<td>0.00</td>
-<td>0</td>
-<td>1</td>
-<td>Monday</td>
-<td>2015</td>
-<td>...</td>
-<td>0.000000</td>
-<td>1.000000</td>
-<td>1.011683e-01</td>
-<td>-0.994869</td>
-<td>0.593391</td>
-<td>No</td>
-<td>(977.4, 1947.8]</td>
-<td>NaN</td>
-<td>1491.287392</td>
-<td>1529.197136</td>
-</tr>
-<tr>
-<th>3243</th>
-<td>2022-11-18</td>
-<td>1222</td>
-<td>-2.0</td>
-<td>-6.3</td>
-<td>0.1</td>
-<td>0.14</td>
-<td>1</td>
-<td>0</td>
-<td>Friday</td>
+<td>Saturday</td>
 <td>2022</td>
 <td>...</td>
-<td>-0.433884</td>
-<td>-0.900969</td>
-<td>-4.853020e-01</td>
-<td>-0.874347</td>
-<td>0.479981</td>
-<td>Yes</td>
+<td>-0.974928</td>
+<td>-0.222521</td>
+<td>-0.299363</td>
+<td>-0.954139</td>
+<td>0.445697</td>
+<td>No</td>
 <td>(977.4, 1947.8]</td>
 <td>NaN</td>
-<td>1753.828488</td>
-<td>1565.985695</td>
-</tr>
-<tr>
-<th>2738</th>
-<td>2021-07-01</td>
-<td>2011</td>
-<td>19.9</td>
-<td>14.3</td>
-<td>0.1</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Thursday</td>
-<td>2021</td>
-<td>...</td>
-<td>0.433884</td>
-<td>-0.900969</td>
-<td>2.012985e-01</td>
-<td>0.979530</td>
-<td>0.608743</td>
-<td>No</td>
-<td>(1947.8, 2918.2]</td>
-<td>NaN</td>
-<td>2455.980461</td>
-<td>2322.649903</td>
-</tr>
-<tr>
-<th>1037</th>
-<td>2016-11-03</td>
-<td>2320</td>
-<td>14.6</td>
-<td>9.3</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Thursday</td>
-<td>2016</td>
-<td>...</td>
-<td>0.433884</td>
-<td>-0.900969</td>
-<td>5.712682e-01</td>
-<td>0.820763</td>
-<td>0.671031</td>
-<td>No</td>
-<td>(1947.8, 2918.2]</td>
-<td>NaN</td>
-<td>2574.174244</td>
-<td>2557.838835</td>
-</tr>
-<tr>
-<th>364</th>
-<td>2014-12-31</td>
-<td>2127</td>
-<td>-7.0</td>
-<td>-13.8</td>
-<td>0.0</td>
-<td>0.00</td>
-<td>0</td>
-<td>0</td>
-<td>Wednesday</td>
-<td>2014</td>
-<td>...</td>
-<td>0.974928</td>
-<td>-0.222521</td>
-<td>-2.449294e-16</td>
-<td>1.000000</td>
-<td>0.745105</td>
-<td>No</td>
-<td>(1947.8, 2918.2]</td>
-<td>NaN</td>
-<td>2006.657797</td>
-<td>1768.520325</td>
+<td>1164.570268</td>
+<td>1104.352983</td>
 </tr>
 </tbody>
 </table>
